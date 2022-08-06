@@ -86,8 +86,7 @@ html {
 /* navbar */
 
 .navbar {
-    background-color: #BCFD4C;
-background-color:orange;
+    background-color: orange;
     height: 100vh;
     width: 0%;
     /*the width of the navbar is intially set to 0 */
@@ -122,8 +121,14 @@ background-color:orange;
 
 .nav-item i:hover,
 .nav-item span:hover {
-    transform: translateY(-.5rem);
-    color: #ff8080;
+    transform: translateY(-.7rem);
+    color: blue;
+}
+
+.nav-item span:hover {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 .nav-item span {
@@ -521,6 +526,7 @@ img.plus {
     .quote-btn:hover {
         color: white;
     }
+
     /* contact */
 
     #email {
