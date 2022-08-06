@@ -87,6 +87,7 @@ html {
 
 .navbar {
     background-color: #BCFD4C;
+background-color:purple;
     height: 100vh;
     width: 0%;
     /*the width of the navbar is intially set to 0 */
