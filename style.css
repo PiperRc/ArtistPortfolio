@@ -158,12 +158,13 @@ nav {
     flex-direction: column;
     align-items: center;
     border: 2px solid red;
-    padding:2rem;
+    padding:1rem;
 
 }
 
 .gallery img{
     padding-top:2rem;
+    width: 100%;
     max-width:800px;
 }
 

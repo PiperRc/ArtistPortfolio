@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/css/lg-thumbnail.css" />
     <link rel="stylesheet" href="style.css">
     <title>CAROL PARRIS</title>
 </head>
@@ -15,7 +17,7 @@
         <div class="hamburger">
             <div class="bar"></div>
         </div>
-        
+
         <nav>
             <ul class="navbar">
                 <li>
@@ -39,15 +41,43 @@
             <section class="intro-gallery">
                 <h1>A SAMPLE OF MY WORK</h1>
                 <div class="gallery">
-                    <img src="paintings/1.jpg" alt="painting-1">
-                    <img src="paintings/2.jpg" alt="painting-2">
-                    <img src="paintings/3.jpg" alt="painting-3">
-                    <img src="paintings/4.jpg" alt="painting-4">
-                    <img src="paintings/5.jpg" alt="painting-5">
-                    <img src="paintings/6.jpg" alt="painting-6">
-                    <img src="paintings/7.jpg" alt="painting-7">
-                    <img src="paintings/8.jpg" alt="painting-8">
-                    <img src="paintings/9.jpg" alt="painting-9">
+
+                    <a href="paintings/1.jpg">
+                        <img src="paintings/1.jpg" alt="painting-1">
+                    </a>
+
+                    <a href="paintings/2.jpg">
+                        <img src="paintings/2.jpg" alt="painting-2">
+                    </a>
+
+                    <a href="paintings/3.jpg">
+                        <img src="paintings/3.jpg" alt="painting-3">
+                    </a>
+
+                    <a href="paintings/4.jpg">
+                        <img src="paintings/4.jpg" alt="painting-4">
+                    </a>
+
+                    <a href="paintings/5.jpg">
+                        <img src="paintings/5.jpg" alt="painting-5">
+                    </a>
+
+                    <a href="paintings/6.jpg">
+                        <img src="paintings/6.jpg" alt="painting-6">
+                    </a>
+
+                    <a href="paintings/7.jpg">
+                        <img src="paintings/7.jpg" alt="painting-7">
+                    </a>
+
+                    <a href="paintings/8.jpg">
+                        <img src="paintings/8.jpg" alt="painting-8">
+                    </a>
+
+                    <a href="paintings/9.jpg">
+                        <img src="paintings/9.jpg" alt="painting-9">
+                    </a>
+
                 </div>
             </section>
 
@@ -61,7 +91,18 @@
         </main>
     </div>
 
-  
+    <script src="node_modules/lightgallery/lightgallery.umd.js"></script>
+
+    <!-- plugin -->
+    <script src="node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+
+    <script type="text/javascript">
+        lightGallery(document.querySelector('.gallery'), {
+            plugins: [lgThumbnail],
+            speed: 200,
+            mode: 'lg-fade',
+        });
+    </script>
 
     <script src="app.js"></script>
 </body>
