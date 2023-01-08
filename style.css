@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --nav-color: #7CFC00;
+    --hamburger-color:black ;
+    --text-size:clamp(2.5rem, 3vw + 1rem, 4rem);
+}
+
+.container {
+    position: relative;
+    
+}
+
+.main-opacity{
+    opacity: .5;
+}
+
+
+/* mobile navbar */
+.hamburger {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    right: .5rem;
+    top: .1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+
+.bar {
+    width: 75%;
+    height: 13%;
+    background: black;
+    position: relative;
+}
+
+.bar::before,
+.bar::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.bar,
+.bar::before,
+.bar::after {
+    transition: all .3s ease-in-out;
+    background-color: var(--hamburger-color);
+}
+
+
+
+.bar::before {
+    transform: translateY(-0.9rem);
+}
+
+.bar::after {
+    transform: translateY(0.9rem);
+}
+
+/* when hamburger is clicked */
+.hamburger-click .bar {
+    transform: translateX(-5rem);
+    background: transparent;
+}
+
+.hamburger-click .bar::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamburger-click .bar::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+.hamburger-click .bar::before,
+.hamburger-click .bar::after {
+    background: red;
+}
+/* nav */
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 0%;
+    transition: width 1s;
+    background-color: var(--nav-color);
+}
+
+.nav-width {
+    width: 50%;
+}
+
+.navbar {
+    width: 100%;
+    height: 80%;
+    list-style: none;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.navbar-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+
+.navbar a:hover {
+    font-size: 3rem;
+}
+/*  */
+.intro-gallery h1 {
+    text-align: center;
+    /* clamp(min,val,max) */
+    /* min:If the preferred value is less than this value,
+     the minimum value will be used. */
+     /* The maximum value is the largest (most positive) expression
+      value to which the value of the property will be
+      assigned if the preferred value is greater than this upper bound. */
+
+    font-size: var(--text-size);
+    padding-top: 5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    padding:2rem;
+
+}
+
+.gallery img{
+    padding-top:2rem;
+    max-width:800px;
+}
+
+/*  */
+.social h2{
+    font-size: var(--text-size);
+}
+  
+@media screen and (min-width:1000px) {
+ .gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    /* padding:4rem; */
+    column-gap: 2rem;
+    row-gap: 2rem;
+ }
+
+ .gallery img{
+    width:100%;
+    max-width: 500px;;
+    padding-top:0;
+ }
+    
+
+
+}
